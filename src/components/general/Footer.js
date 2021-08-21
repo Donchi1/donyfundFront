@@ -138,7 +138,7 @@ function Footer() {
                     alt="logo"
                   />
                   <p>
-                   24 Brooklyn queen NewYork 
+                    24 Brooklyn queen NewYork
                     <br />
                     United States
                   </p>

@@ -242,7 +242,7 @@ export const emailActivateAction = (token) => {
   Axios.post(`${process.env.REACT_APP_AUTH_REQUEST_URL}/activate`, token)
     .then((res) => {
       const data = res.data
-      dispatch({ type: SUCCESS, data })
+      dispatch({ type: SUCCESS, message: data })
     })
     .catch((err) => {
       dispatch({
@@ -258,16 +258,16 @@ export const contactAction = (userData) => {
     userData,
   )
     .then((res) => {
-      dispatch({ type: SUCCESS, data: res.data })
+      dispatch({ type: SUCCESS, message: res.data })
     })
     .catch((error) => {
       dispatch({ type: ERROR, message: error.response.data.message })
     })
 }
-export const newsLetterAction = (userData, letterInfo, setLetterInfo) => {
+export const newsLetterAction = (email, letterInfo, setLetterInfo) => {
   return Axios.post(
     `${process.env.REACT_APP_API_REQUEST_URL}/general/newsLetter`,
-    { userData },
+    { email },
   )
     .then((res) => {
       setLetterInfo({

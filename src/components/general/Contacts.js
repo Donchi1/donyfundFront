@@ -14,7 +14,6 @@ function Contacts() {
     company: '',
     message: '',
     phone: '',
-    file: '',
   })
 
   const dispatch = useDispatch()
@@ -289,28 +288,6 @@ function Contacts() {
                           >
                             About Your Query
                           </textarea>
-                        </div>
-                      </div>
-
-                      <div className="col-lg-12 col-md-12">
-                        <div className="form-group">
-                          <div className="custom-file">
-                            <input
-                              type="file"
-                              className="custom-file-input"
-                              id="upfile"
-                              onChange={(e) => {
-                                const file = e.target.files[0]
-                                setContactData({ ...contactData, file: file })
-                              }}
-                            />
-                            <label
-                              className="custom-file-label"
-                              htmlFor="upfile"
-                            >
-                              Upload file
-                            </label>
-                          </div>
                         </div>
                       </div>
 

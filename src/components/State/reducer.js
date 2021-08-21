@@ -179,7 +179,7 @@ export const authReducer = (state = initialState, action) => {
         ...state,
         userData: '',
         errorMessage: '',
-        successMessage: action.message.message,
+        successMessage: action.message,
         shouldBtnShow: false,
         loading: false,
         successAlert: true,
