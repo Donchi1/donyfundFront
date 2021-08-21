@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Alert, Spinner } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router'
+import { useParams } from 'react-router-dom'
 import { ALERT, NORMAL } from '../State/actionCreator'
 import { passwordUpdateAction } from '../State/actions'
 import jwt from 'jsonwebtoken'
