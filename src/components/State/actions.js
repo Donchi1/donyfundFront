@@ -45,7 +45,7 @@ export const loginAction = (userData) => {
       localStorage.setItem('status', JSON.stringify(data.loginStatus))
       return setTimeout(() => {
         window.location.assign('/user/dashboard')
-      }, [1000])
+      }, [2000])
     })
     .catch((error) => {
       const { message } = error.response.data
