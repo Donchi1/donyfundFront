@@ -79,9 +79,9 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_AUTH_REQUEST_URL}/profile/info`)
+      .get(`${process.env.REACT_APP_API_REQUEST_URL}/profile/info`)
       .then((res) => {
-        const data = res.data
+        const data = res.data.user
 
         dispatch({ type: UPDATE_PROFILE_SUCCESS_DEFAULT, data })
       })

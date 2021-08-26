@@ -28,10 +28,10 @@ function Dashboard() {
       `${process.env.REACT_APP_API_REQUEST_URL}/works/info`,
     )
     const notificationRequest = axios.get(
-      `${process.env.REACT_APP_API_REQUEST_URL}/notification/info`,
+      `${process.env.REACT_APP_API_REQUEST_URL}/user/notification/info`,
     )
     const userRequest = axios.get(
-      `${process.env.REACT_APP_API_REQUEST_URL}/user/info`,
+      `${process.env.REACT_APP_API_REQUEST_URL}/user/profile/info`,
     )
 
     axios
@@ -44,7 +44,7 @@ function Dashboard() {
 
           dispatch({
             type: UPDATE_PROFILE_SUCCESS_DEFAULT,
-            data: userResponse.data,
+            data: userResponse.data.user,
           })
           dispatch({ type: WORK_SUCCESS_DEFAULT, payload: workResponse.data })
           dispatch({

@@ -13,7 +13,7 @@ function NavigationRoute() {
         <div className="d-user-avater">
           {userData.profilePic.picPath ? (
             <img
-              src={userData.profilePic.picPath}
+              src={userData.profilePic.picPath || '/avater.png'}
               className="img-fluid rounded"
               alt="team-1"
             />

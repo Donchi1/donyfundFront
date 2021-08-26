@@ -40,7 +40,7 @@ export const loginAction = (userData) => {
       const data = res.data
       dispatch({
         type: SUCCESS,
-        message: data,
+        message: data.message,
       })
       localStorage.setItem('status', JSON.stringify(data.loginStatus))
       return setTimeout(() => {
@@ -214,7 +214,7 @@ export const articleWorkAction = (userData) => {
 
 export const notificationDeleteAction = (id) => {
   Axios.delete(
-    `${process.env.REACT_APP_API_REQUEST_URL}/notification/delete/${id}`,
+    `${process.env.REACT_APP_API_REQUEST_URL}/user/notification/delete/${id}`,
   )
     .then((res) => {
       const data = res.data.notes.filter((notes) => notes._id !== id)

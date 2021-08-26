@@ -21,7 +21,7 @@ const Notification = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_REQUEST_URL}/notification/info`)
+      .get(`${process.env.REACT_APP_API_REQUEST_URL}/user/notification/info`)
       .then((res) => {
         const data = res.data.notes
         dispatch({ type: NOTIFICATION_FETCH_SUCCESS, payload: data })
